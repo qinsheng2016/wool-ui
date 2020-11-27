@@ -1,0 +1,7 @@
+<h2>{{creditCard.bank}} {{creditCard.type}}</h2>
+<div><span>额度: </span>{{creditCard.creditCardLimit}} {{creditCard.currency}}</div>
+<div>
+  <label>额度:
+    <input [(ngModel)]="creditCard.creditCardLimit" placeholder="额度"/>
+  </label>
+</div>

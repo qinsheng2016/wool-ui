@@ -5,20 +5,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CreditCardComponent } from './credit-card/credit-card.component';
+import { CreditCardsComponent } from './credit-cards/credit-cards.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CreditCardComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-    FormsModule
-  ],
+  declarations: [AppComponent, CreditCardsComponent],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

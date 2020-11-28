@@ -1,0 +1,8 @@
+$table-striped-order:         odd !default;
+
+/* 去掉列表中黑白间隔的背景色 */
+:host ::ng-deep .table-striped {
+  tbody tr:nth-of-type(#{$table-striped-order}) {
+    background-color: white;
+  }
+}

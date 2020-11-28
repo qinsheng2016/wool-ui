@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CreditCard } from './credit-card.model';
+import { CreditCardService } from '../credit-card.service';
 
 @Component({
   selector: 'app-credit-cards',
@@ -7,15 +8,23 @@ import { CreditCard } from './credit-card.model';
   styleUrls: ['./credit-cards.component.scss'],
 })
 export class CreditCardsComponent implements OnInit {
-  creditCard: CreditCard = {
-    cardNumber: '0001',
-    bank: '中国工商银行',
-    type: '环球旅行卡',
-    creditCardLimit: 76000,
-    currency: 'CNY',
-  };
+  creditCards: CreditCard[];
 
-  constructor() {}
+  constructor(private creditCardService: CreditCardService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getCreditCards();
+  }
+
+  /* 同步方法
+  getCreditCards(): void {
+    this.creditCards = this.creditCardService.getCreditCards();
+  } */
+
+  /* 异步方法 */
+  getCreditCards(): void {
+    this.creditCardService.getCreditCards().subscribe((creditCards) => {
+      this.creditCards = creditCards;
+    });
+  }
 }

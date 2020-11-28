@@ -6,9 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CreditCardsComponent } from './credit-cards/credit-cards.component';
+import { CreditCardDetailComponent } from './credit-card-detail/credit-card-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, CreditCardsComponent],
+  declarations: [AppComponent, CreditCardsComponent, CreditCardDetailComponent],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

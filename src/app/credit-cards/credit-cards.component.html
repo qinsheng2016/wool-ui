@@ -1,7 +1,21 @@
-<h2>{{creditCard.bank}} {{creditCard.type}}</h2>
-<div><span>额度: </span>{{creditCard.creditCardLimit}} {{creditCard.currency}}</div>
-<div>
-  <label>额度:
-    <input [(ngModel)]="creditCard.creditCardLimit" placeholder="额度"/>
-  </label>
-</div>
+<h2>信用卡列表</h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">银行</th>
+    <th scope="col">卡种</th>
+    <th scope="col">卡号</th>
+    <th scope="col">额度</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let creditCard of creditCards; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ creditCard.bank }}</td>
+    <td>{{ creditCard.type }}</td>
+    <td>{{ creditCard.cardNumber }}</td>
+    <td>{{ creditCard.creditCardLimit | number }} {{ creditCard.currency }}</td>
+  </tr>
+  </tbody>
+</table>

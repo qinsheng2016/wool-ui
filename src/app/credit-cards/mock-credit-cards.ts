@@ -1,6 +1,6 @@
 import { CreditCard } from './credit-card.model';
 
-export const CreditCards: CreditCard[] = [
+export const CREDITCARDS: CreditCard[] = [
   {
     cardNumber: '0001',
     bank: '中国工商银行',

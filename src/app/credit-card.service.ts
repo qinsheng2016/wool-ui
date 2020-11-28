@@ -18,4 +18,8 @@ export class CreditCardService {
   getCreditCards(): Observable<CreditCard[]> {
     return of(CREDITCARDS);
   }
+
+  getCreditCard(id: number): Observable<CreditCard> {
+    return of(CREDITCARDS.find((creditCard) => creditCard.id === id));
+  }
 }

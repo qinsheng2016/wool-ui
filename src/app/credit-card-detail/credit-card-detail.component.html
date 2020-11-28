@@ -1,1 +1,10 @@
-<p>credit-card-detail works!</p>
+<div *ngIf="creditCard">
+  <h2>{{creditCard.bank}} {{creditCard.type}}</h2>
+  <div><span>id: </span>{{creditCard.id}}</div>
+  <div>
+    <label>额度:
+      <input [(ngModel)]="creditCard.creditCardLimit" placeholder="额度"/>
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+</div>

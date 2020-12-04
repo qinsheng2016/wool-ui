@@ -2,21 +2,19 @@ import { Injectable } from '@angular/core';
 import { CreditCard } from './credit-cards/credit-card.model';
 import { CREDITCARDS } from './credit-cards/mock-credit-cards';
 import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CreditCardService {
-  constructor() {}
+  creditCardsUrl = '/getCreditCardList';
+  constructor(private http: HttpClient) {}
 
-  /* 同步获取数据
-  getCreditCards(): CreditCard[] {
-    return CREDITCARDS;
-  } */
-
-  /* 模拟从服务端获取数据 */
-  getCreditCards(): Observable<CreditCard[]> {
-    return of(CREDITCARDS);
+  async getCreditCards(): Promise<CreditCard[]> {
+    return this.http
+      .get<CreditCard[]>(this.creditCardsUrl)
+      .toPromise<CreditCard[]>();
   }
 
   getCreditCard(id: number): Observable<CreditCard> {

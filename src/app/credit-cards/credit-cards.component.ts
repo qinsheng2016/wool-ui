@@ -16,14 +16,8 @@ export class CreditCardsComponent implements OnInit {
     this.getCreditCards();
   }
 
-  /* 同步方法
   getCreditCards(): void {
-    this.creditCards = this.creditCardService.getCreditCards();
-  } */
-
-  /* 异步方法 */
-  getCreditCards(): void {
-    this.creditCardService.getCreditCards().subscribe((creditCards) => {
+    this.creditCardService.getCreditCards().then((creditCards) => {
       this.creditCards = creditCards;
     });
   }

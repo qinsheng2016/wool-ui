@@ -13,13 +13,13 @@ export const POS: Pos[] = [
     description: '',
     organization: '乐刷',
     rate: '万60',
-    blacklist: ['光大银行'],
+    blacklist: ['光大银行', '民生银行', '平安银行'],
   },
   {
     id: 3,
     description: '',
     organization: '钱宝',
-    rate: '刷卡费率0.53,1000以下手机付0.3费率,云闪付扫费率0.3',
-    blacklist: [],
+    rate: '刷卡费率0.53, 1000以下手机付0.3费率, 云闪付扫费率0.3',
+    blacklist: ['光大银行', '民生银行', '平安银行'],
   },
 ];

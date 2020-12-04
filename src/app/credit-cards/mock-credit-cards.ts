@@ -6,7 +6,7 @@ export const CREDITCARDS: CreditCard[] = [
     cardNumber: '0001',
     bank: '中国工商银行',
     type: '环球旅行卡',
-    creditCardLimit: 76000,
+    creditLimit: 76000,
     currency: 'CNY',
   },
   {
@@ -14,7 +14,7 @@ export const CREDITCARDS: CreditCard[] = [
     cardNumber: '0002',
     bank: '中国建设银行',
     type: '尊享V卡(大山白)',
-    creditCardLimit: 80000,
+    creditLimit: 80000,
     currency: 'CNY',
   },
   {
@@ -22,7 +22,7 @@ export const CREDITCARDS: CreditCard[] = [
     cardNumber: '0003',
     bank: '中国农业银行',
     type: '悠然白金卡',
-    creditCardLimit: 75000,
+    creditLimit: 75000,
     currency: 'CNY',
   },
 ];

@@ -1,0 +1,6 @@
+{
+  "/getCreditCardList": {
+    "target": "http://localhost:8016",
+    "secure": "false"
+  }
+}

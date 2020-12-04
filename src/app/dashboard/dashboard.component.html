@@ -1,8 +1,12 @@
-<h3>Credit Cards</h3>
 <div class="grid grid-pad">
-  <a *ngFor="let creditCard of creditCards" class="col-1-4"  routerLink="/detail/{{creditCard.id}}">
+  <a class="col-1-4"  routerLink="/creditCards">
     <div class="module hero">
-      <h4>{{creditCard.type}}</h4>
+      <h4>信用卡列表</h4>
+    </div>
+  </a>
+  <a class="col-1-4" routerLink="/pos">
+    <div class="module hero">
+      <h4>POS列表</h4>
     </div>
   </a>
 </div>

@@ -1,0 +1,7 @@
+<div *ngIf="posDetail">
+  <h2>{{posDetail.organization}}</h2>
+  <div><span>id: {{posDetail.id}}</span></div>
+  <div><span>费率: {{posDetail.rate}}</span></div>
+  <div><span>黑名单: {{posDetail.blacklist}}</span></div>
+  <button (click)="goBack()">go back</button>
+</div>

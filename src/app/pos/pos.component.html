@@ -1,0 +1,19 @@
+<h2>POS机列表</h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">收单机构</th>
+    <th scope="col">费率</th>
+    <th scope="col">黑名单</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let pos of posArray; index as i" routerLink="/pos/detail/{{pos.id}}">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ pos.organization }}</td>
+    <td>{{ pos.rate }}</td>
+    <td>{{ pos.blacklist }}</td>
+  </tr>
+  </tbody>
+</table>

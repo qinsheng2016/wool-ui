@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "wool-ui"
+    }
+  },
+  "defaultProject": "wool-ui",
+  "cli": {
+    "analytics": false
+  }
 }

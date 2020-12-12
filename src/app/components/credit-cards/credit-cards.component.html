@@ -1,0 +1,23 @@
+<h2>信用卡列表</h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">银行</th>
+    <th scope="col">卡种</th>
+    <th scope="col">卡号</th>
+    <th scope="col">账单日</th>
+    <th scope="col">还款日</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let creditCard of creditCards; index as i" routerLink="/creditCard/detail/{{creditCard.id}}">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ creditCard.bank }}</td>
+    <td>{{ creditCard.type }}</td>
+    <td>{{ creditCard.cardNumber }}</td>
+    <td>{{ creditCard.statementDay | number }}</td>
+    <td>{{ creditCard.paymentDueDay}}</td>
+  </tr>
+  </tbody>
+</table>

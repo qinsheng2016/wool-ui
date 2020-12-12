@@ -5,12 +5,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CreditCardsComponent } from './credit-cards/credit-cards.component';
-import { CreditCardDetailComponent } from './credit-card-detail/credit-card-detail.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { CreditCardsComponent } from './components/credit-cards/credit-cards.component';
+import { CreditCardDetailComponent } from './components/credit-cards/credit-card-detail/credit-card-detail.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
-import { PosComponent } from './pos/pos.component';
-import { PosDetailComponent } from './pos-detail/pos-detail.component';
+import { PosComponent } from './components/pos/pos.component';
+import { PosDetailComponent } from './components/pos/pos-detail/pos-detail.component';
+import { RightsComponent } from './components/rights/rights.component';
+import { RightDetailComponent } from './components/rights/right-detail/right-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { PosDetailComponent } from './pos-detail/pos-detail.component';
     DashboardComponent,
     PosComponent,
     PosDetailComponent,
+    RightsComponent,
+    RightDetailComponent,
   ],
   imports: [
     BrowserModule,

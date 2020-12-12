@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CreditCard } from './credit-card.model';
-import { CreditCardService } from '../credit-card.service';
+import { CreditCard } from '../../models/credit-card.model';
+import { CreditCardService } from '../../services/credit-card.service';
 
 @Component({
   selector: 'app-credit-cards',

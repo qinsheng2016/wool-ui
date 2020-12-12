@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { Pos } from '../pos/pos.model';
-import { PosService } from '../pos.service';
+import { Pos } from '../../../models/pos.model';
+import { PosService } from '../../../services/pos.service';
 
 @Component({
   selector: 'app-pos-detail',

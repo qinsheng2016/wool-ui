@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { CreditCardService } from '../credit-card.service';
-import { CreditCard } from '../credit-cards/credit-card.model';
+import { CreditCardService } from '../../../services/credit-card.service';
+import { CreditCard } from '../../../models/credit-card.model';
 
 @Component({
   selector: 'app-credit-card-detail',

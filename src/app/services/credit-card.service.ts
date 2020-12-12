@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { CreditCard } from './credit-cards/credit-card.model';
-import { CREDITCARDS } from './credit-cards/mock-credit-cards';
+import { CreditCard } from '../models/credit-card.model';
+import { CREDITCARDS } from '../mock/mock-credit-cards';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 

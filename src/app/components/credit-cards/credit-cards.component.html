@@ -6,7 +6,8 @@
     <th scope="col">银行</th>
     <th scope="col">卡种</th>
     <th scope="col">卡号</th>
-    <th scope="col">额度</th>
+    <th scope="col">账单日</th>
+    <th scope="col">还款日</th>
   </tr>
   </thead>
   <tbody>
@@ -15,7 +16,8 @@
     <td>{{ creditCard.bank }}</td>
     <td>{{ creditCard.type }}</td>
     <td>{{ creditCard.cardNumber }}</td>
-    <td>{{ creditCard.creditLimit | number }} {{ creditCard.currency }}</td>
+    <td>{{ creditCard.statementDay | number }}</td>
+    <td>{{ creditCard.paymentDueDay}}</td>
   </tr>
   </tbody>
 </table>

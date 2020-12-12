@@ -1,4 +1,4 @@
-import { Pos } from './Pos.model';
+import { Pos } from '../models/pos.model';
 
 export const POS: Pos[] = [
   {

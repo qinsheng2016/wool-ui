@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { POS } from './pos/mock-pos';
-import { Pos } from './pos/pos.model';
+import { POS } from '../mock/mock-pos';
+import { Pos } from '../models/pos.model';
 
 @Injectable({
   providedIn: 'root',

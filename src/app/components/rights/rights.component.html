@@ -1,0 +1,28 @@
+<h2>主要权益列表</h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">银行</th>
+    <th scope="col">接送机</th>
+    <th scope="col">贵宾厅</th>
+    <th scope="col">过期时间</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let right of rights; index as i" routerLink="/right/detail/{{right.id}}">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ right.bank}}</td>
+    <td>{{ right.pickupsTimes }}</td>
+    <td>{{ right.VIPRoomRight }}</td>
+    <td>{{ right.expiryDate | date:'yyyy-MM-dd' }}</td>
+  </tr>
+  <tr>
+    <td scope="row">总次数</td>
+    <td></td>
+    <td>{{ totalPickupsTimes }}</td>
+    <td></td>
+    <td></td>
+  </tr>
+  </tbody>
+</table>

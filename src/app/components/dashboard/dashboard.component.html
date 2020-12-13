@@ -15,3 +15,31 @@
     </div>
   </a>
 </div>
+
+<div class="aaa"></div>
+
+<h2>年费信息</h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">银行</th>
+    <th scope="col">卡种</th>
+    <th scope="col">卡号</th>
+    <th scope="col">年费减免方式</th>
+    <th scope="col">完成进度</th>
+    <th scope="col">截止日期</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let annualFee  of annualFeesInfo; index as i" >
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ annualFee.bank }}</td>
+    <td>{{ annualFee.cardType }}</td>
+    <td>{{ annualFee.cardNumber }}</td>
+    <td>{{ annualFee.reductionWay  }}</td>
+    <td><p><ngb-progressbar [showValue]="true" type="{{annualFee.progressType}}" [value]="annualFee.spentTimes || annualFee.spentAmount" [max]="annualFee.consumptionAmount || annualFee.consumptionTimes"></ngb-progressbar></p></td>
+    <td>{{ annualFee.endDate| date:'yyyy-MM-dd' }}</td>
+  </tr>
+  </tbody>
+</table>
